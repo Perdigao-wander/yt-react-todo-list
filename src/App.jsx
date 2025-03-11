@@ -70,7 +70,7 @@ function App() {
     }
 
     return (
-        <div className="w-full h-full bg-slate-500 flex justify-center p-4">
+        <div className="w-full h-screen bg-slate-500 flex justify-center p-4">
             <div className="w-[500px] space-y-4">
                 <Title>Gerenciador de Tarefas</Title>
                 <AddTask onAddTask={onAddTask}/>
