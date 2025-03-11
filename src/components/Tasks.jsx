@@ -13,7 +13,7 @@ function Tasks({tasks, onTaskDelete, onTaskClick, onTaskReadMore}) {
                 <li key={task.id} className="flex gap-2">
                     <button
                         onClick={() => onTaskClick(task.id)}
-                        className={`bg-slate-400 text-left w-full cursor-pointer text-white p-2 rounded-md ${task.isCompleted && 'line-through'}`}>
+                        className={`bg-slate-400 text-left flex w-full cursor-pointer text-white p-2 rounded-md ${task.isCompleted && 'line-through'}`}>
                         {task.isCompleted && <CheckIcon/>}
                         {task.title}
                     </button>
