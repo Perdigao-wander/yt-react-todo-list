@@ -1,4 +1,4 @@
-import {ChevronRightIcon, TrashIcon} from "lucide-react";
+import {CheckIcon, ChevronRightIcon, TrashIcon} from "lucide-react";
 import Button from "./Button.jsx";
 
 function Tasks({tasks, onTaskDelete, onTaskClick, onTaskReadMore}) {
@@ -14,15 +14,13 @@ function Tasks({tasks, onTaskDelete, onTaskClick, onTaskReadMore}) {
                     <button
                         onClick={() => onTaskClick(task.id)}
                         className={`bg-slate-400 text-left w-full cursor-pointer text-white p-2 rounded-md ${task.isCompleted && 'line-through'}`}>
+                        {task.isCompleted && <CheckIcon/>}
                         {task.title}
                     </button>
-                    <Button
-                        onClick={() => onTaskReadMore(task.id)}
-                    >
+                    <Button onClick={() => onTaskReadMore(task.id)}>
                         <ChevronRightIcon/>
                     </Button>
-                    <Button
-                        onClick={() => onTaskDelete(task.id)}>
+                    <Button onClick={() => onTaskDelete(task.id)}>
                         <TrashIcon/>
                     </Button>
                 </li>
